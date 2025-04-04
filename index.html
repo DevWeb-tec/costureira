@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Costura & Conserto de Roupas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+   
+    <header>
+        <h1>Costura & Conserto de Roupas</h1>
+        <button class="menu-toggle">☰</button>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#precos">Preços</a>
+            <a href="#modelos">Modelos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="carousel">
+            <img src="imagens/costura1.jpg" class="active" alt="Imagem 1">
+            <img src="imagens/costura2.jpg" alt="Imagem 2">
+            <img src="imagens/costura3.jpg" alt="Imagem 3">
+        </div>
+    </div>
+
+    <section id="sobre">
+    <h2>Sobre</h2>
+    <div class="sobre-container">
+        <img src="imagens/sobre.jpg" alt="Ateliê de costura">
+        <div class="sobre-texto">
+            <p>Há mais de 15 anos oferecemos serviços profissionais de costura e reformas de roupas. Nossa equipe especializada está pronta para:</p>
+            <ul>
+                <li><i class="fas fa-check"></i> Reformas e ajustes de roupas</li>
+                <li><i class="fas fa-check"></i> Consertos emergenciais</li>
+                <li><i class="fas fa-check"></i> Personalização de peças</li>
+                <li><i class="fas fa-check"></i> Alterações em vestidos de festa</li>
+                <li><i class="fas fa-check"></i> Reformas de estofados</li>
+            </ul>
+            <p>Utilizamos materiais de qualidade e técnicas modernas para garantir o melhor resultado em cada peça.</p>
+        </div>
+    </div>
+    </section>
+
+    <section id="precos">
+        <h2>Preços</h2>
+        <p>Consulte nossos valores acessíveis para cada tipo de serviço.</p>
+    </section>
+
+    <section id="modelos">
+    <h2>Modelos</h2>
+    <div class="modelos-grid">
+        <!-- Repita este bloco 12 vezes com suas imagens -->
+        <div class="modelo-item">
+            <img src="imagens/modelo1.jpg" alt="Modelo 1">
+            <div class="modelo-info">
+                <p>Vestido de Festa Reformado</p>
+            </div>
+        </div>
+        <!-- ... outras imagens ... -->
+        <div class="modelo-item">
+            <img src="imagens/modelo2.jpg" alt="Modelo 1">
+            <div class="modelo-info">
+                <p>Conjunto Casual</p>
+            </div>
+        </div>
+
+        <div class="modelo-item">
+            <img src="imagens/modelo3.jpg" alt="Modelo 1">
+            <div class="modelo-info">
+                <p>Vestido Floral</p>
+            </div>
+        </div>
+
+        <div class="modelo-item">
+            <img src="imagens/modelo4.jpg" alt="Modelo 1">
+            <div class="modelo-info">
+                <p>Reforma Camisa</p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Seção de Contato Corrigida -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <div class="contato-container">
+            <div class="contato-form">
+                <form>
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                </form>
+            </div>
+
+            <div class="contato-info">
+                <h3>Outras Formas de Contato</h3>
+                <ul>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Rua da Costura, 123<br>Centro - Sua Cidade/SP</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <p>(11) 99999-9999<br>(11) 98888-8888</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <p>contato@costura.com<br>orcamentos@costura.com</p>
+                    </li>
+                </ul>
+                
+                <div class="redes-sociais">
+                    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; <span id="current-year">2025</span> Costura & Conserto de Roupas. Todos os direitos reservados.
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Menu Hambúrguer
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Fechar menu ao clicar em um item
+        document.querySelectorAll('nav a').forEach(item => {
+            item.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Atualizar ano do rodapé
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
